@@ -4,8 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import re
 
-# Current directory containing your TIFF images
-directory_path = '.'
+# New subfolder name
+subfolder_name = '2021_11_08_729nm_70um_addr0_3_6Vpp/right'
+
+# Create the new directory path by joining the current directory and the subfolder name
+directory_path = os.path.join('.', subfolder_name)
 
 # Get a list of all tiff images in the directory
 tiff_files = [f for f in os.listdir(directory_path) if f.startswith('image') and (f.endswith('.tif') or f.endswith('.tiff'))]

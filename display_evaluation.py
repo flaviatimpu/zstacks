@@ -2,7 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-full_path = os.getcwd()
+# New subfolder name
+subfolder_name = '2021_11_08_729nm_70um_addr0_3_6Vpp/right'
+
+# Create the new directory path by joining the current directory and the subfolder name
+directory_path = os.path.join('.', subfolder_name)
+
+full_path = directory_path
+
 # Get the last part of the path
 parent_folder, last_folder = os.path.split(full_path)
 # Get the second to last part of the path

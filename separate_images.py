@@ -1,8 +1,11 @@
 import tifffile as tf
 import os
 
-# Current directory containing your TIFF images and the script
-directory_path = '.'
+# New subfolder name
+subfolder_name = '2021_11_08_729nm_70um_addr0_3_6Vpp'
+
+# Create the new directory path by joining the current directory and the subfolder name
+directory_path = os.path.join('.', subfolder_name)
 
 # Create folders for the left and right images if they don't exist
 left_folder = os.path.join(directory_path, 'left')
